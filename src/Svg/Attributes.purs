@@ -113,6 +113,9 @@ r = attr (AttrName "r") <<< show
 viewBox :: forall r i. Number -> Number -> Number -> Number -> IProp (viewBox :: String | r) i
 viewBox x y w h = attr (AttrName "viewBox") (joinWith " " $ map show [x, y, w, h])
 
+preserveAspectRatio :: forall r i. IProp (preserveAspectRatio :: String | r) i
+preserveAspectRatio = attr (AttrName "preserveAspectRatio") ("none")
+
 rx :: forall r i. Number -> IProp (rx :: Number | r) i
 rx = attr (AttrName "rx") <<< show
 

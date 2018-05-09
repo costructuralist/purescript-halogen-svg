@@ -9,7 +9,8 @@ type GraphicalEventAttributes r = MouseEvents r
 
 type SVGsvg = GraphicalEventAttributes (CoreAttributes (width :: Number, 
                                                         height :: Number, 
-                                                        viewBox :: String, 
+                                                        viewBox :: String,
+                                                        preserveAspectRatio :: String, 
                                                         onWheel :: WheelEvent, 
                                                         onContextMenu :: MouseEvent))
 
